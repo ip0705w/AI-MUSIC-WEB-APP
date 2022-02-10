@@ -1,6 +1,6 @@
-/*function preload(){
+function preload(){
   sound=loadSound("music.mp3");
-}*/
+}
 
 function setup(){
   canvas=createCanvas(400,400);
