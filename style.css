@@ -1,0 +1,31 @@
+.heading
+{
+  font-size: 23px;
+  width: 100%;
+  margin: 0px;
+}
+.note
+{
+  font-size: 15px;
+  color: black;
+}
+body
+{
+  background-image:url("https://image.shutterstock.com/image-vector/vector-set-realistic-isolated-neon-260nw-1192029745.jpg");
+  background-size: cover;	
+}
+  #song
+  {
+  	font-size: 23px;
+  	margin: 15px;
+  }
+  canvas{
+    width: 300px;
+    height: 300px;
+        border:#1A237E;
+        border-radius:5px;
+        box-shadow: 10px 10px 10px gray;
+        border-style: solid;
+        border-width: 4px;
+    magin-top:20px;
+}
