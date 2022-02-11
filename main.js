@@ -3,9 +3,9 @@ leftWristY=0
 rigthWristX=0
 rigthWristY=0
 
-/*function preload(){
+function preload(){
   sound=loadSound("music.mp3 ,music2.mp3");
-}*/
+}
 
 function setup(){
   canvas=createCanvas(400,400);
