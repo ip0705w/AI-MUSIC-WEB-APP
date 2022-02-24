@@ -3,9 +3,10 @@ leftWristY=0
 rigthWristX=0
 rigthWristY=0
 
-function preload(){
-  sound=loadSound("music.mp3 ,music2.mp3");
-}
+/*function preload(){
+  sound=loadSound("music.mp3");
+  sound2=loadSound("music2.mp3")
+}*/
 
 function setup(){
   canvas=createCanvas(400,400);
@@ -33,6 +34,11 @@ function start(){
   sound.rate(1);
 }
 
+function start(){
+  sound2.play()
+  sound2.setVolume(1);
+  sound2.rate(1);
+}
 function gotPoses(results){
   if(results.length > 0){
     console.log(results);
@@ -43,5 +49,28 @@ function gotPoses(results){
     rightWristX= results[0].pose.rightWrist.x;
     rightWristY= results[0].pose.rightWrist.y;
     console.log("rightwristX= " +rightWristX + "rightWristY= " + rightWristY);
+    
+    scoreLeftWrist=results[0].pose.keypoints[9].score;
+    console.log("scoreLeftwrist= " +scoreLeftWrist)
   }
 }
+
+function draw(){
+  image(video,0,0,400,400);
+  
+  fill("#B71C1C");
+  stroke("#212121");
+  
+  if(scoreLeftWrist > 0.2)
+    {
+      circle(leftWristX,leftWristY,20);
+      number1=Number(leftWristY);
+      floor1=floor(number1);
+      volume=floor1/400;
+      //sound.setVolume(volume)
+      console.log(volume);
+      
+      
+    }
+}
+
