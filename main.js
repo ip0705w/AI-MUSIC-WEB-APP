@@ -3,10 +3,10 @@ leftWristY=0
 rigthWristX=0
 rigthWristY=0
 
-/*function preload(){
+function preload(){
   sound=loadSound("music.mp3");
   sound2=loadSound("music2.mp3")
-}*/
+}
 
 function setup(){
   canvas=createCanvas(400,400);
@@ -67,7 +67,7 @@ function draw(){
       number1=Number(leftWristY);
       floor1=floor(number1);
       volume=floor1/400;
-      //sound.setVolume(volume)
+   sound.setVolume(volume)
       console.log(volume);
       
       
